@@ -43,6 +43,16 @@ html, body {
     font-size: 500;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    cursor: pointer;
+}
+
+.section-title {
+    color: #F2785C;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 132.3%;
+    margin: 0 auto;
+    width: max-content;
 }
 
 .container {
@@ -317,5 +327,36 @@ html, body {
     .preview {
         height: 251px;
         padding: 43px 0 0;
+    }
+}
+
+.steps-section {
+    height: 424px;
+    padding: 80px 0 0;
+
+    .steps-title {
+        margin: 0 auto 40px;
+    }
+
+    .steps {
+        display: flex;
+        justify-content: space-between;
+
+        .step {
+            width: max-content;
+            text-align: center;
+
+            img {
+                margin: 0 0 30px;
+            }
+
+            p {
+                color: #0D606F;
+                font-family: Aleo;
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 120%;
+            }
+        }
     }
 }
