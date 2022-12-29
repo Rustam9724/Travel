@@ -55,6 +55,30 @@ html, body {
     width: max-content;
 }
 
+@media (max-width: 699px) {
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 559px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 494px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
+
 .container {
     max-width: 1200px;
     width: 83.3%;
@@ -334,29 +358,65 @@ html, body {
     height: 424px;
     padding: 80px 0 0;
 
-    .steps-title {
-        margin: 0 auto 40px;
+    .steps-container {
+        .steps-title {
+            margin: 0 auto 40px;
+        }
+    
+        .steps {
+            display: flex;
+            justify-content: space-between;
+    
+            .step {
+                width: max-content;
+                text-align: center;
+    
+                img {
+                    margin: 0 0 30px;
+                }
+    
+                @media (max-width: 899px) {
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        margin: 0 0 19px;
+                    }
+                }
+    
+                p {
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-weight: 400;
+                    font-size: 2rem;
+                    line-height: 120%;
+                }
+    
+                @media (max-width: 899px) {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            @media (max-width: 499px) {
+                .step {
+                    max-width: 111px;
+                }
+            }
+        }
+
+        @media (max-width: 379px) {
+            .steps {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 2rem;
+            }
+        }
     }
 
-    .steps {
-        display: flex;
-        justify-content: space-between;
-
-        .step {
-            width: max-content;
-            text-align: center;
-
-            img {
-                margin: 0 0 30px;
-            }
-
-            p {
-                color: #0D606F;
-                font-family: Aleo;
-                font-weight: 400;
-                font-size: 2rem;
-                line-height: 120%;
-            }
+    @media (max-width: 549px) {
+        .steps-container {
+            width: 92.3%;
         }
     }
 }
