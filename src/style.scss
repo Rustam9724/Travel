@@ -1,4 +1,3 @@
-$red1: #F2785C;
 $button-color: #0D606F;
 
 *, ul, p, h1, h2, h3, h4, button, body, input, ::before, ::after, div {
@@ -43,6 +42,7 @@ html, body {
     color: white;
     font-size: 500;
     border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
 .container {
@@ -52,9 +52,11 @@ html, body {
 }
 
 .header {
-    background-color: $red1;
+    background-color: rgba(242, 120, 92, 0.7);;
     min-height: 90px;
-    padding: 25px 0 0 0 ;
+    padding: 25px 0 0 0;
+    margin: 0 0 33px;
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 
     .header-container {
         display: flex;
@@ -68,6 +70,7 @@ html, body {
             align-items: center;
             justify-content: space-between;
             min-height: 31px;
+            z-index: 10;
 
             .logo__title {
                 font-family: Magra;
@@ -181,5 +184,64 @@ html, body {
 @media (max-width: 759px) {
     .header {
         // opacity: 0;
+    }
+}
+
+.preview {
+    min-height: 765px;
+    background: url("assets/preview-background.png") no-repeat;
+    background-size: cover;
+
+    .preview-content {
+        width: 74%;
+        min-height: 422px;
+
+        .preview-title {
+            width: 100%;
+            font-family: Aleo;
+            color: white;
+            font-size: 8rem;
+            line-height: 120%;
+            font-weight: 700;
+            margin: 0 0 56px;
+        }
+
+        .preview-description {
+            font-family: Aleo;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 2rem;
+            line-height: 120%;
+            color: white;
+            margin: 0 0 26px;
+        }
+
+        .preview__planning {
+            height: 95px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 2% 0 4.6%;
+            column-gap: 5%;
+
+            p {
+                width: 62.7%;
+                font-family: Aleo;
+                font-weight: 400;
+                font-style: italic;
+                font-size: 2.4rem;
+                line-height: 120%;
+                color: #F2785C;
+            }
+            
+            button {
+                width: 228px;
+                height: 59px;
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 132.3%;
+            }
+        }
     }
 }
