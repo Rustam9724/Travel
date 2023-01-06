@@ -167,7 +167,7 @@ html, body {
             }
         }
 
-        @media (max-width: 699px) {
+        @media (max-width: 703px) {
             nav {
                 display: none;
             }
@@ -216,24 +216,31 @@ html, body {
     }
 }
 
-@media (max-width: 503px) {
+@media (max-width: 703px) {
     .header {
         height: 53px;
         background-color: rgba(0, 0, 0, 0);
         box-shadow: none;
         padding: 0;
-        margin: 0 0 67px;
+    }
+}
+
+@media (max-width: 589px) {
+    .header {
+        margin-bottom: 17.179vw;
     }
 }
 
 .preview {
-    height: 765px;
+    height: 54vw;
     background: url("assets/preview-background.png") no-repeat;
     background-size: cover;
 
+    .preview__container {
+
         .preview-content {
             width: 74%;
-            min-height: 422px;
+            height: 422px;
     
             .preview-title {
                 width: 100%;
@@ -245,10 +252,35 @@ html, body {
                 margin: 0 0 56px;
             }
 
-            @media (max-width: 503px) {
+            @media (max-width: 1126px) {
+                .preview-title {
+                    font-size: 7.5rem;
+                } 
+            }
+
+            @media (max-width: 1056px) {
+                .preview-title {
+                    font-size: 7rem;
+                } 
+            }
+
+            @media (max-width: 994px) {
+                .preview-title {
+                    font-size: 5rem;
+                } 
+            }
+
+            @media (max-width: 894px) {
+                .preview-title {
+                    font-size: 4.5rem;
+                    margin-bottom: 12px;
+                } 
+            }
+
+            @media (max-width: 589px) {
                 .preview-title {
                     display: none;
-                }
+                } 
             }
     
             .preview-description {
@@ -261,10 +293,10 @@ html, body {
                 margin: 0 0 26px;
             }
 
-            @media (max-width: 503px) {
+            @media (max-width: 589px) {
                 .preview-description {
                     display: none;
-                }
+                } 
             }
     
             .preview__planning {
@@ -286,7 +318,7 @@ html, body {
                     color: #F2785C;
                 }
 
-                @media (max-width: 649px) {
+                @media (max-width: 720px) {
                     p {
                         width: 62.7%;
                         font-size: 1.4rem;
@@ -308,7 +340,7 @@ html, body {
                     line-height: 132.3%;
                 }
 
-                @media (max-width: 649px) {
+                @media (max-width: 720px) {
                     button {
                         width: 92px;
                         height: 30px;
@@ -318,40 +350,56 @@ html, body {
                 }
             }
 
-            @media (max-width: 649px) {
-                .preview__planning {
+            @media (max-width: 720px) {
+                .preview__planning  {
                     height: 48px;
-                    padding: 0 2.5% 0 4.6%;
-                    column-gap: 18%;
-                }
-            }
-
-            @media (max-width: 332px) {
-                .preview__planning {
-                    height: 48px;
-                    padding: 0 2.5% 0 4.6%;
-                    column-gap: 10%;
+                    column-gap: 20%;
                 }
             }
         }
 
-        @media (max-width: 877px) {
+        @media (max-width: 1029px) {
+            .preview-content {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 994px) {
+            .preview-content {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 894px) {
+            .preview-content {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 884px) {
             .preview-content {
                 width: 100%;
-            } 
+            }
         }
 
-        @media (max-width: 503px) {
+        @media (max-width: 797px) {
             .preview-content {
-                height: 48px;
-            } 
+                height: 250px;
+            }
         }
+    }
+
+    @media (max-width: 884px) {
+        .preview__container {
+            width: 92.3%;
+        }
+    }
 }
 
-@media (max-width: 503px) {
+@media (max-width: 703px) {
     .preview {
-        height: 251px;
-        padding: 43px 0 0;
+        height: 64.358vw;
+        padding-top: 43px;
     }
 }
 
@@ -461,6 +509,7 @@ html, body {
 .stories-wrapper {
     height: 1424px;
     background: url("assets/stories-background.png") bottom no-repeat;
+    background-size: cover;
 
     .section-title {
         margin-bottom: 40px;
@@ -468,7 +517,7 @@ html, body {
 
     .stories-section {
         background: rgba(255, 255, 255, 0.7);
-        min-height: 1270px;
+        height: 1270px;
 
         .stories-content {
             padding-top: 50px;
@@ -715,4 +764,43 @@ html, body {
             }
         }
     }
+
+    @media (max-width: 581px) {
+        .stories-section {
+            height: 720px;
+        }
+    }
 }
+
+@media (max-width: 581px) {
+    .stories-wrapper {
+        height: 1224px;
+    }
+}
+
+.footer {
+    padding-top: 10px;
+
+    .footer-container {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 27.3%;
+
+        p {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 132.3125%;
+            color: white;
+        }
+
+        .contacts {
+            display: flex;
+            column-gap: 21.4px;
+
+            svg {
+                display: block;
+            }
+        }
+    }
+}
+
