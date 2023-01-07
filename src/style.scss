@@ -501,8 +501,32 @@ html, body {
     }
 }
 
+@media (max-width: 800px) {
+    .destination-section {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 390px) {
+    .destination-section {
+        margin-bottom: 20px;
+    }
+}
+
 .stories-title {
     margin-bottom: 80px;
+}
+
+@media (max-width: 800px) {
+    .stories-title {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 390px) {
+    .stories-title {
+        margin-bottom: 10px;
+    }
 }
 
 .stories-wrapper {
