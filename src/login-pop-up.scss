@@ -43,6 +43,25 @@ html, body {
     img {
         margin-right: 2.678%;
     }
+
+    @media (max-width: 467px) {
+        img {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .login-pop-up-button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 467px) {
+    .login-pop-up-button {
+        font-size: 1rem;
+    }
 }
 
 .login-pop-up {
@@ -64,6 +83,24 @@ html, body {
         font-size: 3.2rem;
         line-height: 120%;
         margin: 0 auto 30px;
+    }
+
+    @media (max-width: 842px) {
+        h3 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 789px) {
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 389px) {
+        h3 {
+            font-size: 2rem;
+        }
     }
 
     .facebook-button {
@@ -140,11 +177,23 @@ html, body {
         display: inline-block;
     }
 
+    @media (max-width: 422px) {
+        a {
+            font-size: 1rem;
+        }
+    }
+
     .border__trait {
         width: 100%;
         height: 1px;
         background: rgba(13, 96, 111, 0.5);
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 562px) {
+        .border__trait {
+            margin-bottom: 10px;
+        }
     }
 
     p {
@@ -153,5 +202,11 @@ html, body {
         font-size: 1.5rem;
         line-height: 120%;
         color: rgba(13, 96, 111, 0.5);
+    }
+
+    @media (max-width: 562px) {
+        p {
+            font-size: 1rem;
+        }
     }
 }
