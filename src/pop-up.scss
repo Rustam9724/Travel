@@ -49,7 +49,7 @@ html, body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 45.138vw;
+    width: 650px;
     height: 660px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     padding: 25px 3.125vw 23px;
@@ -65,6 +65,18 @@ html, body {
         font-size: 3.2rem;
         line-height: 120%;
         margin: 0 auto 30px;
+    }
+    
+    @media (max-width: 349px) {
+        h3 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 327px) {
+        h3 {
+            font-size: 2.5rem;
+        }
     }
 
     .facebook-button {
@@ -157,6 +169,12 @@ html, body {
     }
 }
 
+@media (max-width: 649px) {
+    .login-pop-up {
+        width: 100vw;
+    }
+}
+
 .create-account-pop-up {
     width: 650px;
     position: absolute;
@@ -168,6 +186,7 @@ html, body {
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
+    display: none;
 
     h3 {
         color: #0D606F;
