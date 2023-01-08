@@ -23,11 +23,14 @@ module.exports = {
     mode,
     target,
     plugins,
-    entry: './src/index.js',
+    entry: './src/index.ts',
     devtool: 'source-map',
     output: {
       path: path.resolve(__dirname, 'dist'),
       clean: true,
+    },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
     },
     
     devServer: {
@@ -63,6 +66,11 @@ module.exports = {
                     cacheDirectory: true,
                   },
                 },
+              },
+              {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
               },
         ],
     }
