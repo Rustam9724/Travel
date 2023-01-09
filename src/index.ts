@@ -17,8 +17,11 @@ const signInButton = document.querySelector('.sign-in-button');
 const loginEmailInput = document.querySelector('#login-email');
 const loginPasswordInput = document.querySelector('#login-password');
 const userData: string[] = [];
-const body = document.querySelector('body');
 const substrates = document.querySelectorAll('.substrate');
+const registerLink = document.querySelector('.register-link');
+const createAccountPopUp = document.querySelector('.create-account-pop-up');
+const signUpButton = document.querySelector('.sign-up-button');
+const logInLink = document.querySelector('.log-in-link');
 
 loginButton.addEventListener('click', () => {
     loginPopUp.classList.add('visible');
@@ -43,8 +46,26 @@ signInButton.addEventListener('click', () => {
 substrates.forEach(elem => {
     elem.addEventListener('click', () => {
         loginPopUp.classList.remove('visible');
+        createAccountPopUp.classList.remove('visible');
         substrates.forEach(e => {
             e.classList.remove('visible');
         })
     })
+})
+
+registerLink.addEventListener('click', () => {
+    loginPopUp.classList.remove('visible');
+    createAccountPopUp.classList.add('visible');
+})
+
+signUpButton.addEventListener('click', () => {
+    createAccountPopUp.classList.remove('visible');
+    substrates.forEach(e => {
+        e.classList.remove('visible');
+    })
+})
+
+logInLink.addEventListener('click', () => {
+    createAccountPopUp.classList.remove('visible');
+    loginPopUp.classList.add('visible');
 })
