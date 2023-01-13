@@ -8,6 +8,7 @@ import './assets/carousel-image_2.png';
 import './assets/carousel-image_3.png';
 import './assets/facebook-logo.png';
 import './assets/google-logo.png';
+import './assets/carousel-arrow.png';
 
 // Работа с регистрацией
 
@@ -68,4 +69,51 @@ signUpButton.addEventListener('click', () => {
 logInLink.addEventListener('click', () => {
     createAccountPopUp.classList.remove('visible');
     loginPopUp.classList.add('visible');
+})
+
+// Карусель
+
+const carouselImagesBlock = document.querySelector('.carousel-images');
+const carouselSwitches: NodeListOf<HTMLInputElement> = document.querySelectorAll('.carousel-switch');
+const carouselImages: NodeListOf<HTMLImageElement> = document.querySelectorAll('.carousel-image');
+const carouselArrowLeft = document.querySelector('.carousel-arrow-left');
+const carouselArrowRight= document.querySelector('.carousel-arrow-right');
+
+carouselSwitches.forEach(swtch => {
+    swtch.addEventListener('click', () => {
+        carouselImagesBlock.className = `carousel-images ${swtch.dataset.number}-image`;
+    })
+})
+
+carouselImages.forEach(image => {
+    image.addEventListener('click', () => {
+        carouselImagesBlock.className = `carousel-images ${image.dataset.number}-image`;
+        if (image.dataset.number === 'first') {
+            carouselSwitches[0].checked = true;
+        } else if (image.dataset.number === 'second') {
+            carouselSwitches[1].checked = true;
+        } else {
+            carouselSwitches[2].checked = true;
+        }
+    })
+})
+
+carouselArrowLeft.addEventListener('click', () => {
+    if (carouselImagesBlock.className === 'carousel-images second-image') {
+        carouselImagesBlock.className = 'carousel-images first-image';
+        carouselSwitches[0].checked = true;
+    } else if (carouselImagesBlock.className === 'carousel-images third-image') {
+        carouselImagesBlock.className = 'carousel-images second-image';
+        carouselSwitches[1].checked = true;
+    }
+})
+
+carouselArrowRight.addEventListener('click', () => {
+    if (carouselImagesBlock.className === 'carousel-images' || carouselImagesBlock.className === 'carousel-images first-image') {
+        carouselImagesBlock.className = 'carousel-images second-image';
+        carouselSwitches[1].checked = true;
+    } else if (carouselImagesBlock.className === 'carousel-images second-image') {
+        carouselImagesBlock.className = 'carousel-images third-image';
+        carouselSwitches[2].checked = true;
+    }
 })

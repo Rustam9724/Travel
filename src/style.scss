@@ -465,38 +465,252 @@ html, body {
 }
 
 .destination-section {
-    background-color: red;
+    // background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 80px;
 
     .destination-container {
-        width: 50vw;
-        min-width: 300px;
-        background-color: green;
+        width: 55.555vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
 
         .destination-title {
             width: 100%;
-        } 
+            margin-bottom: 46px;
+        }
 
         .carousel-images {
             flex-grow: 1;
-            background-color: yellow;
             overflow-x: visible;
             display: flex;
+            column-gap: 4.166vw;
             justify-content: flex-start;
+            margin-bottom: 24px;
+            position: relative;
 
-            img {
-                width: 100%;
-                height: 100%;
+            &.first-image {
+                margin-left: 0;
+                transition: 1s;
+            }
+
+            &.second-image {
+                margin-left: -59.722vw;
+                transition: 1s;
+            }
+
+            @media (max-width: 703px) {
+                &.second-image {
+                    margin-left: -96.153vw;
+                }
+            }
+
+            &.third-image {
+                margin-left: -119.444vw;
+                transition: 1s;
+            }
+
+            @media (max-width: 703px) {
+                &.third-image {
+                    margin-left: -192.307vw;
+                }
+            }
+
+            & > img {
+                width: 55.555vw;
+                height: 55.555vw;
                 margin-left: 10;
                 margin-right: 10;
                 border-radius: 10px;
+                flex-shrink: 0;
+                flex-grow: 0;
             }
+
+            @media (max-width: 703px) {
+                & > img {
+                    width: 92.307vw;
+                    height: 53.846vw;
+                }
+            }
+
+            .country {
+                position: absolute;
+                color: white;
+                font-weight: 500;
+                font-size: 2.222vw;
+                line-height: 132.3125%;
+                top: 49.861vw;
+
+                &.spain {
+                    left: 1.0416vw;
+                }
+
+                @media (max-width: 703px) {
+                    &.spain {
+                        left: 3.846vw;
+                    } 
+                }
+
+                &.japan {
+                    left: 100vw;
+                }
+                
+                &.usa {
+                    left: 200vw;
+                }
+            }
+
+            @media (max-width: 703px) {
+                .country {
+                    font-size: 5.128vw;
+                    line-height: 132.3%;
+                    top: 2.0512vw;
+                }
+            }
+        }
+
+        @media (max-width: 703px) {
+            .carousel-images {
+                column-gap: 3.846vw;
+            }
+        }
+
+        .carousel-switches-block {
+            width: 80px;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 40px;
+
+            label {
+                width: 20px;
+                height: 20px;
+                background: rgba(242, 120, 92, 0.5);
+                border-radius: 100%;
+                cursor: pointer;
+            }
+
+            @media (max-width: 703px) {
+                label {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+
+            input:checked + label {
+                background: #F2785C;
+            }
+        }
+
+        @media (max-width: 703px) {
+            .carousel-switches-block {
+                position: absolute;
+                bottom: 3.5vw;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 36px;
+                height: 8px;
+            }
+        }
+
+        @media (max-width: 499px) {
+            .carousel-switches-block {
+                bottom: 3.75rem;
+            }
+        }
+
+        .button {
+            width: 28.5%;
+            height: 59px;
+            display: flex;
+            align-items: center;
+            column-gap: 4.385%;
+            margin: 0 auto;
+            justify-content: center;
+
+            @media (max-width: 924px) {
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            @media (max-width: 849px) {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            @media (max-width: 574px) {
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 132.91%;
+            }
+
+            @media (max-width: 1074px) {
+                span {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (max-width: 849px) {
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+
+            @media (max-width: 724px) {
+                span {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        @media (max-width: 849px) {
+            .button {
+                width: 25.555%;
+                height: 30px;
+            }
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            display: none;
+        }
+
+        @media (max-width: 703px) {
+            .carousel-arrow {
+                display: block;
+                top: 52.5%;
+                cursor: pointer;
+
+                &.carousel-arrow-left {
+                    left: 1.282vw;
+                    transform: rotate(180deg);
+                }
+
+                &.carousel-arrow-right {
+                    left: 83.333vw;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 703px) {
+        .destination-container {
+            width: 92.307vw;
+
         }
     }
 }
