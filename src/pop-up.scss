@@ -287,3 +287,40 @@ html, body {
 .substrate.visible {
     display: block;
 }
+
+.burger-pop-up {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8px 15px 30px;
+    row-gap: 6px;
+    background: #F2785C; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    display: none;
+
+    .burger-navigation {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+
+        img {
+            cursor: pointer;
+        }
+
+        a {
+            color: white;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 132.3125%;
+            cursor: pointer;
+        }
+    }
+}

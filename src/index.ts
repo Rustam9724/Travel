@@ -9,6 +9,7 @@ import './assets/carousel-image_3.png';
 import './assets/facebook-logo.png';
 import './assets/google-logo.png';
 import './assets/carousel-arrow.png';
+import './assets/cross.png';
 
 // Работа с регистрацией
 
@@ -29,7 +30,6 @@ loginButton.addEventListener('click', () => {
     substrates.forEach(elem => {
         elem.classList.add('visible');
     })
-
 })
 
 loginEmailInput.addEventListener('change', (event) => {
@@ -116,4 +116,34 @@ carouselArrowRight.addEventListener('click', () => {
         carouselImagesBlock.className = 'carousel-images third-image';
         carouselSwitches[2].checked = true;
     }
+})
+
+// Работа с бургер-меню
+
+const burgerButton = document.querySelector('.burger-button');
+const burgerPopUp: HTMLDivElement = document.querySelector('.burger-pop-up');
+const cross = document.querySelector('.burger-pop-up img');
+const burgerLinks = document.querySelectorAll('.burger-pop-up a');
+const accountLink = document.querySelector('.account-link');
+
+burgerButton.addEventListener('click', () => {
+    burgerPopUp.style.display = 'flex';
+})
+
+cross.addEventListener('click', () => {
+    burgerPopUp.style.display = 'none';
+})
+
+burgerLinks.forEach(burgerLink => {
+    burgerLink.addEventListener('click', () => {
+        burgerPopUp.style.display = 'none';
+    })
+})
+
+accountLink.addEventListener('click', () => {
+    burgerPopUp.style.display = 'none';
+    loginPopUp.classList.add('visible');
+    substrates.forEach(elem => {
+        elem.classList.add('visible');
+    })
 })

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="preview">
+        <section class="preview" id="preview">
             <div class="substrate"></div>
             <header class="header">
                 <div class="container header-container">
@@ -23,10 +23,10 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#">How It Works</a></li>
-                            <li><a href="#">Plan Your Trip</a></li>
-                            <li><a href="#">Destinations</a></li>
-                            <li><a href="#">Travel Stories</a></li>
+                            <li><a href="#preview">How It Works</a></li>
+                            <li><a href="#steps-section">Plan Your Trip</a></li>
+                            <li><a href="#destination-section">Destinations</a></li>
+                            <li><a href="#stories-title">Travel Stories</a></li>
                         </ul>
                     </nav>
                     <button class="login-button button">Login</button>
@@ -79,6 +79,17 @@
                 <div class="border__trait"></div>
                 <p>Already have an account? <a href="#" class="log-in-link">Log in</a></p>
             </div>
+            <div class="burger-pop-up">
+                <img src="assets/cross.png" alt="cross">
+                <ul class="burger-navigation">
+                    <li><a href=#preview>How It Works</a></li>
+                    <li><a href=#steps-section>Plan Your Trip</a></li>
+                    <li><a href="#destination-section">Destinations</a></li>
+                    <li><a href="#stories-title">Travel Stories</a></li>
+                    <li><a href="#" class="account-link">Account</a></li>
+                    <li><a href="#footer">Social Media</a></li>
+                </ul>
+            </div>
             <div class="container preview__container">
                 <div class="preview-content">
                     <h1 class="preview-title">Explore the beauty of the World</h1>
@@ -90,7 +101,7 @@
                 </div>
             </div>
         </section>
-        <section class="steps-section">
+        <section class="steps-section" id="steps-section">
             <div class="substrate"></div>
             <div class="container steps-container">
                 <h1 class="section-title steps-title">3 STEPS TO THE PERFECT TRIP</h1>
@@ -110,7 +121,7 @@
                 </div>
             </div>
         </section>
-        <section class="destination-section">
+        <section class="destination-section" id="destination-section">
             <div class="substrate"></div>
             <div class="container destination-container">
                 <h1 class="section-title destination-title">POPULAR DESTINATIONS</h1>
@@ -144,7 +155,7 @@
                 </div>
             </div>
         </section>
-        <h1 class="section-title stories-title">TRAVEL STORIES</h1>
+        <h1 class="section-title stories-title" id="stories-title">TRAVEL STORIES</h1>
         <div class="stories-wrapper">
             <div class="substrate"></div>
             <section class="stories-section">
@@ -197,7 +208,7 @@
                         </div>
                 </div>
             </section>
-            <footer class="footer">
+            <footer class="footer" id="footer">
                 <div class="container footer-container">
                     <p>All Rights Reserved © Travel Portal</p>
                     <div class="contacts">
